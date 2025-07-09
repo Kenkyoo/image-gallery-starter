@@ -89,7 +89,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
                 style={{ transform: "translate3d(0, 0, 0)" }}
                 placeholder="blur"
                 blurDataURL={blurDataUrl}
-                src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${public_id}.${format}`}
+                src={secure_url}
                 width={720}
                 height={480}
                 sizes="(max-width: 640px) 100vw,
@@ -153,6 +153,7 @@ export async function getStaticProps() {
       width: result.width,
       public_id: result.public_id,
       format: result.format,
+      secure_url: result.secure_url,
     });
     i++;
   }
