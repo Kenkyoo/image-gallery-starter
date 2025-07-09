@@ -74,7 +74,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               Clone and Deploy
             </a>
           </div>
-          {images.map(({ id, public_id, format, blurDataUrl, secure_url }) => (
+          {images.map(({  id, secure_url, blurDataUrl }) => (
             <Link
               key={id}
               href={`/?photoId=${id}`}
@@ -89,7 +89,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
                 style={{ transform: "translate3d(0, 0, 0)" }}
                 placeholder="blur"
                 blurDataURL={blurDataUrl}
-                src={secure_url}
+                src={secure_url!}
                 width={720}
                 height={480}
                 sizes="(max-width: 640px) 100vw,
