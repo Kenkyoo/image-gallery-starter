@@ -4,9 +4,7 @@ module.exports = {
       {
         protocol: "https",
         hostname: "res.cloudinary.com",
-        port: "",
-        pathname: "/my-account/**",
-        search: "",
+        pathname: "/dmwlb93o3/**", // 👈 usá tu cloud name real
       },
     ],
   },
