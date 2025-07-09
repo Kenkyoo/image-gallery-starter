@@ -74,7 +74,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               Clone and Deploy
             </a>
           </div>
-          {images.map(({ id, public_id, format, blurDataUrl }) => (
+          {images.map(({ id, public_id, format, blurDataUrl, secure_url }) => (
             <Link
               key={id}
               href={`/?photoId=${id}`}
