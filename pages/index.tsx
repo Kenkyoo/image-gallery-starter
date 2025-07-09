@@ -55,15 +55,14 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               <span className="flex max-h-full max-w-full items-center justify-center">
                 <Bridge />
               </span>
-              <span className="absolute left-0 right-0 bottom-0 h-[400px] bg-gradient-to-b from-black/0 via-black to-black"></span>
+              <span className="absolute bottom-0 left-0 right-0 h-[400px] bg-gradient-to-b from-black/0 via-black to-black"></span>
             </div>
             <Logo />
-            <h1 className="mt-8 mb-4 text-base font-bold uppercase tracking-widest">
-              2022 Event Photos
+            <h1 className="mb-4 mt-8 text-base font-bold uppercase tracking-widest">
+              Image Gallery app
             </h1>
             <p className="max-w-[40ch] text-white/75 sm:max-w-[32ch]">
-              Our incredible Next.js community got together in San Francisco for
-              our first ever in-person conference!
+              Dev with Cloudinary, NextJs and Vercel.
             </p>
             <a
               className="pointer z-10 mt-6 rounded-lg border border-white bg-white px-3 py-2 text-sm font-semibold text-black transition hover:bg-white/10 hover:text-white md:mt-4"
@@ -71,10 +70,10 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               target="_blank"
               rel="noreferrer"
             >
-              Clone and Deploy
+              Vercel
             </a>
           </div>
-          {images.map(({  id, secure_url, blurDataUrl }) => (
+          {images.map(({ id, secure_url, blurDataUrl }) => (
             <Link
               key={id}
               href={`/?photoId=${id}`}
@@ -102,34 +101,15 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
         </div>
       </main>
       <footer className="p-6 text-center text-white/80 sm:p-12">
-        Thank you to{" "}
+        Dev by
         <a
-          href="https://edelsonphotography.com/"
+          href="https://github.com/Kenkyoo/image-gallery-starter"
           target="_blank"
           className="font-semibold hover:text-white"
           rel="noreferrer"
         >
-          Josh Edelson
+          Kenyo
         </a>
-        ,{" "}
-        <a
-          href="https://www.newrevmedia.com/"
-          target="_blank"
-          className="font-semibold hover:text-white"
-          rel="noreferrer"
-        >
-          Jenny Morgan
-        </a>
-        , and{" "}
-        <a
-          href="https://www.garysextonphotography.com/"
-          target="_blank"
-          className="font-semibold hover:text-white"
-          rel="noreferrer"
-        >
-          Gary Sexton
-        </a>{" "}
-        for the pictures.
       </footer>
     </>
   );
