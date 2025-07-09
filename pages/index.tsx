@@ -101,14 +101,14 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
         </div>
       </main>
       <footer className="p-6 text-center text-white/80 sm:p-12">
-        Dev by
+        Dev by 
         <a
           href="https://github.com/Kenkyoo/image-gallery-starter"
           target="_blank"
           className="font-semibold hover:text-white"
           rel="noreferrer"
         >
-          Kenyo
+           Kenkyo
         </a>
       </footer>
     </>
